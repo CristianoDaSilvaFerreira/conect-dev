@@ -1,21 +1,11 @@
 import React from 'react';
+import Header from './components/Header';
 import './style.css';
 
 function Home() {
     return (
         <div>
-            <header className='header'>
-                <div className='toolbar'>
-                    <div>
-                        <span>Conecta Dev</span>
-                    </div>
-                    <div>
-                        <button>Novo Post</button>
-                        <span>Img1</span>
-                        <span>Img2</span>
-                    </div>
-                </div>
-            </header>
+           <Header />
             <main className='main'>
                 <div className='navbar'>
                     Navbar
