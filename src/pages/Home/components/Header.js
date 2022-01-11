@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from '@material-ui/core';
+// import '../style.css';
 
 function Header() {
     return (
@@ -8,7 +10,9 @@ function Header() {
                 <a href="/">Conecta Dev - Alteração</a>
             </div>
             <div>
-                <button>Novo Post</button>
+                <Button color='primary' variant='contained'>
+                    Novo Post
+                </Button>
                 <span>Img1</span>
                 <span>Img2</span>
             </div>
