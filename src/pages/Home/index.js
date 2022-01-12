@@ -14,6 +14,13 @@ const useStyles = makeStyles({
     root: {
         display: 'flex',
         flexDirection: 'column',
+    },
+
+    main: {
+        height: '100vh',
+        display: 'flex',
+        width: '1200px',
+        margin: '0 auto',
     }
 });
 
@@ -25,7 +32,8 @@ function Home() {
     return (
         <div className={classes.root}>
            <Header />
-            <main className='main'>
+           <div className='toolbar'></div>
+            <main className={classes.main}>
                 <NavBar />
                 <Feed />
             </main>
