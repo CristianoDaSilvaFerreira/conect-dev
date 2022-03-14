@@ -1,14 +1,20 @@
+import React from 'react';
+import { Button } from '@material-ui/core';
+// import '../style.css';
+
 function Header() {
   return (
     <header className="header">
       <div className="toolbar">
         <div>
-          <span> Conecta Dev </span>{" "}
-        </div>{" "}
+          <a href="/"> Conecta Dev </a>
+        </div>
         <div>
-          <button> Novo Post </button> <span> img1 </span> <span> img2 </span>{" "}
-        </div>{" "}
-      </div>{" "}
+          <Button color="primary" variant="contained"> Novo Post </Button> 
+          <span> img1 </span> 
+          <span> img2 </span>
+        </div>
+      </div>
     </header>
   );
 }
