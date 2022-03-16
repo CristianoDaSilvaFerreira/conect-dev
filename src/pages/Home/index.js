@@ -1,23 +1,26 @@
-import React from 'react';
+import React from "react";
 
 // import "./style.css";
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
-import Header from './components/Header/Header';
-import NavBar from './components/Navbar/NavBar';
-import Feed from './components/Feed/Feed';
+import Header from "./components/Header/Header";
+import NavBar from "./components/Navbar/NavBar";
+import Feed from "./components/Feed/Feed";
+import Container from "@material-ui/core/Container";
+import Box from "@material-ui/core/Box";
 
 const useSyles = makeStyles({
   root: {
-    display: 'flex',
-    flexDirection: 'column'
+    display: "flex",
+    flexDirection: "column",
   },
   main: {
-    height: '100vh',
-    display: 'flex',
-    width: '1200px',
-    margin: '0 auto',
-  }
+    height: "100vh",
+    padding: 24,
+  },
+  toolbar: {
+    minHeight: 64,
+  },
 });
 
 function Home() {
@@ -26,10 +29,14 @@ function Home() {
   return (
     <div className={classes.root}>
       <Header />
-      <main className={classes.main}>
-        <NavBar />
-        <Feed />
-        </main>
+      <div className={classes.toolbar}></div>
+      <Container maxWidth="lg">
+        <Box display="flex">
+          <NavBar />
+          <Feed />
+        </Box>
+      </Container>
+      <main className={classes.main}></main>
     </div>
   );
 }
